@@ -24,7 +24,7 @@ public class UsersControlller {
      *
      */
     @Autowired
-    public void asdf(final UsersRepository repository) {
+    public void UsersControlller(final UsersRepository repository) {
 
         this.repository = repository;
 
@@ -132,6 +132,30 @@ public class UsersControlller {
 
         }
 
+    }
+
+    @PostMapping(path = "login")
+    public ResponseEntity<User> login(@RequestBody User user) {
+
+        try {
+
+            Optional<User> _user = repository.findByUsernameAndAndPassword(user.username, user.password);
+
+            if(_user.isPresent()) {
+
+                return new ResponseEntity<>(_user.get(), HttpStatus.OK);
+
+            } else {
+
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+            }
+
+        } catch (EmptyResultDataAccessException ex) {
+
+            return new ResponseEntity<>(new User(), HttpStatus.NOT_FOUND);
+
+        }
     }
 
 
