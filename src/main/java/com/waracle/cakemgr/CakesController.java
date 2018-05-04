@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = {"http://localhost:4201"}, maxAge = 4800, allowCredentials = "false")
+@CrossOrigin(origins = {"http://localhost:4201", "https://angular-spring-frontend.herokuapp.com"}, maxAge = 4800, allowCredentials = "false")
 @RestController
 @RequestMapping("/cakes")
 public class CakesController {
