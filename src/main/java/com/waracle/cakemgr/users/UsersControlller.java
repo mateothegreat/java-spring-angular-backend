@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = {"http://localhost:4201", "https://angular-spring-frontend.herokuapp.com"}, maxAge = 4800, allowCredentials = "false")
+@CrossOrigin(origins = {"http://localhost:4201", "https://angular-spring-frontend.herokuapp.com", "https://angular-spring-frontend.matthewdavis.io"}, maxAge = 4800, allowCredentials = "false")
 @RestController
 @RequestMapping("/users")
 public class UsersControlller {
