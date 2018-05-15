@@ -12,7 +12,7 @@ import java.util.Optional;
 @CrossOrigin(origins = {"http://localhost:4201", "https://angular-spring-frontend.herokuapp.com", "https://angular-spring-frontend.matthewdavis.io"}, maxAge = 4800, allowCredentials = "false")
 @RestController
 @RequestMapping("/users")
-public class UsersControlller {
+public class UsersController {
 
     private UsersRepository repository;
 
